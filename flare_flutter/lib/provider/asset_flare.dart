@@ -1,5 +1,4 @@
 import 'package:flare_flutter/asset_provider.dart';
-import 'package:flutter/rendering.dart';
 import 'package:flutter/services.dart';
 import 'package:meta/meta.dart';
 
@@ -22,7 +21,7 @@ class AssetFlare extends AssetProvider {
   });
 
   @override
-  int get hashCode => hashValues(bundle, name);
+  int get hashCode => Object.hash(bundle, name);
 
   @override
   bool operator ==(dynamic other) {
